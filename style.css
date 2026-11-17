@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4e6d2;
+    color: #402414;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #2c180a, #4e2d12, #412510);
+    color: #f4e6d2;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #d6a65d;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #f4e6d2;
+    transition: color 0.3s ease, outline-offset 0.3s ease;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+header nav a:hover {
+    color: #d6a65d;
+}
+
+header nav a:focus-visible {
+    outline: 2px solid #d6a65d;
+    outline-offset: 4px;
+}
+
+#hero {
+    padding: 100px 40px;
+    background:
+    linear-gradient(rgba(30, 15, 5, 0.65), rgba(30, 15, 5, 0.65)),
+    url("img/fundo-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #f4e6d2;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#hero h2 {
+    font-size: 42px;
+    max-width: 650px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+#hero p {
+    max-width: 550px;
+    font-size: 17px;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+
+}
+
+#hero a {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #d6a65d;
+    color: #402414;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#hero a:hover {
+    background-color: #351608;
+    color: #f4e6d2;
+    transform: translateY(-3px);
+}
+
+#hero a:focus-visible,
+#contato a:focus-visible {
+    outline: 2px solid #f4e6d2;
+    outline-offset: 4px;
+}
+
+#cardapio {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+#cardapio h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+#cardapio>p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.produtos div {
+    background-color: #fffaf3;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 0 0 calc((100% - 50px) / 3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(64, 36, 20, 0.10);
+    border: 1px solid #ead9c3;
+   
+
+}
+
+.produtos div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(64, 36, 20, 0.18);
+}
+.carrossel{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.seta{
+    background-color: #4e2d12;
+    color: #f4e6d2; 
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+    padding: 0;
+    text-align: center;
+}
+.janela-produtos{
+    overflow: hidden;
+    width: 100%;
+}
+
+.produtos {
+    display: flex;
+    gap: 25px;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease;
+    
+}
+
+.produtos h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #704323;
+}
+
+.produtos p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #402414;
+}
+
+.produtos img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 65%;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 15px;
+
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+#sobre {
+    padding: 80px 40px;
+    background-color: #fffaf3;
+    text-align: center;
+}
+
+#sobre h2 {
+    font-size: 32px;
+    color: #704323;
+    margin-bottom: 25px;
+}
+
+#sobre p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#contato {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #2e1b0b, #5a361b);
+    color: #f4e6d2;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+#contato p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+#contato a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background-color: #d6a65d;
+    color: #351608;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#contato a:hover {
+    background-color: #351608;
+    color: #f4e6d2;
+    transform: translateY(-3px);
+}
+
+footer {
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #2c180a, #4e2d12, #412510);
+    color: #f4e6d2;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #d6a65d;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 140px;
+    }
+
+    .produtos {
+        flex-direction: row;
+    }
+
+    .produtos div {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .produtos p {
+        font-size: 14px;
+    }
+
+    .produtos h3 {
+        font-size: 20px;
+    }
+
+    .produtos img {
+        width: 100%;
+        height: 200px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #hero {
+        padding: 70px 25px;
+    }
+
+    #hero h2 {
+        font-size: 30px;
+        max-width: 100%;
+    }
+
+    #hero a {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    #hero p {
+        font-size: 15px;
+
+    }
+
+    #cardapio {
+        padding: 50px 20px;
+    }
+
+    #cardapio h2 {
+        font-size: 28px;
+    }
+
+    #cardapio>p {
+        font-size: 14px;
+    }
+
+    #sobre {
+        padding: 50px 20px;
+    }
+
+    #sobre p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    #sobre h2,
+    #contato h2 {
+        font-size: 28px;
+    }
+
+    #contato {
+        padding: 50px 20px;
+    }
+
+    #contato a {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    #contato p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    footer {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    footer h2 {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
