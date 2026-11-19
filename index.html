@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Grão & Prosa | Cafeteria</title>
+    <meta name="description"
+        content="Conheça o Grão & Prosa, uma cafeteria com cafés especiais, bebidas artesanais e acompanhamentos preparados com carinho.">
 </head>
 
 <body>
-    <header>
+    <header class="cabecalho">
         <h1>Grão & Prosa</h1>
         <nav>
             <a href="#hero">Início</a>
@@ -17,6 +19,7 @@
             <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
         </nav>
+        <a href="#contato" class="botao-cabecalho">Faça seu pedido</a>
     </header>
     <main>
         <section id="hero">
@@ -40,33 +43,33 @@
                 <div class="janela-produtos">
                     <div class="produtos">
                         <div>
-                            <img src="img/Cafe expresso.jpg" alt="Café espresso em uma xícara">
+                            <img src="img/Cafe expresso.jpg" alt="Café espresso em uma xícara" loading="lazy">
                             <h3>Espresso</h3>
                             <p>Uma dose de café especial, com aroma marcante, sabor intenso e uma crema delicada.</p>
                         </div>
                         <div>
-                            <img src="img/Cappuccino.jpg" alt="Cappuccino com espuma de leite">
+                            <img src="img/Cappuccino.jpg" alt="Cappuccino com espuma de leite" loading="lazy">
                             <h3>Cappuccino</h3>
                             <p>Café espresso combinado com leite vaporizado e uma cremosa camada de espuma.</p>
                         </div>
 
                         <div>
-                            <img src="img/Brownie.jpg" alt="Brownie artesanal de chocolate">
+                            <img src="img/Brownie.jpg" alt="Brownie artesanal de chocolate" loading="lazy">
                             <h3>Brownie</h3>
                             <p>Brownie artesanal com textura macia, interior úmido e sabor intenso de chocolate.</p>
                         </div>
                         <div>
-                            <img src="img/waflles.jpg.jpg" alt="Waffle artesanal">
+                            <img src="img/waflles.jpg.jpg" alt="Waffle artesanal" loading="lazy">
                             <h3>Waffle</h3>
                             <p>Waffle artesanal feito com cobertura de mel.</p>
                         </div>
                         <div>
-                            <img src="img/Cheesecake.jpg" alt="Cheesecake de morango">
+                            <img src="img/Cheesecake.jpg" alt="Cheesecake de morango" loading="lazy">
                             <h3>Cheesecake</h3>
-                            <p>Um delicioso cheesecake com coberturade morango</p>
+                            <p>Um delicioso cheesecake com coberturade de morango</p>
                         </div>
                         <div>
-                            <img src="img/Croissant.jpg" alt="Croissant">
+                            <img src="img/Croissant.jpg" alt="Croissant" loading="lazy">
                             <h3>Croissant</h3>
                             <p>Um croissant artesanal, leve e crocante, perfeito para acompanhar seu café.</p>
                         </div>
@@ -93,22 +96,29 @@
                 momentos únicos.</p>
             <p>Endereço: Rua dos Cafés, 125 — Centro.</p>
             <p>Horário: Segunda a sábado, das 08h às 19h.</p>
-            <a href="https://wa.me/5515999999999">
-                Fale conosco pelo WhatsApp
-            </a>
 
         </section>
     </main>
 
+    <a href="https://wa.me/5515997004822?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20o%20card%C3%A1pio%20do%20Gr%C3%A3o%20%26%20Prosa."
+        class="botao-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Entre em contato pelo WhatsApp">
+
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="currentColor"
+                d="M16.04 3C8.87 3 3.04 8.83 3.04 16c0 2.29.6 4.44 1.66 6.3L3 29l6.87-1.8A12.94 12.94 0 0 0 16.04 29C23.21 29 29.04 23.17 29.04 16S23.21 3 16.04 3Zm0 23.7c-2.03 0-4.02-.55-5.75-1.6l-.41-.24-4.08 1.07 1.09-3.98-.27-.43A10.65 10.65 0 0 1 5.94 16c0-5.57 4.53-10.1 10.1-10.1S26.14 10.43 26.14 16s-4.53 10.7-10.1 10.7Zm5.54-7.56c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z" />
+        </svg>
+    </a>
+
+
     <footer>
-        <h2>Grão & Prosa</h2>
+        <p class="titulo-rodape">Grão & Prosa</p>
         <p>Feito com paixão por café e bons momentos.</p>
         <p> © 2026 Grão & Prosa. Todos os direitos reservados.</p>
 
 
     </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

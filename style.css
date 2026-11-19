@@ -15,15 +15,17 @@ body {
 
 }
 
-header {
+.cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #2c180a, #4e2d12, #412510);
+    background: transparent;
     color: #f4e6d2;
     padding: 20px 40px;
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -56,10 +58,10 @@ header nav a:focus-visible {
 }
 
 #hero {
-    padding: 100px 40px;
+    padding: 180px 40px 120px;
     background:
-    linear-gradient(rgba(30, 15, 5, 0.65), rgba(30, 15, 5, 0.65)),
-    url("img/fundo-hero.jpg");
+        linear-gradient(rgba(30, 15, 5, 0.65), rgba(30, 15, 5, 0.65)),
+        url("img/fundo-hero.jpg");
     background-size: cover;
     background-position: center;
     color: #f4e6d2;
@@ -135,7 +137,7 @@ header nav a:focus-visible {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 12px rgba(64, 36, 20, 0.10);
     border: 1px solid #ead9c3;
-   
+
 
 }
 
@@ -143,16 +145,18 @@ header nav a:focus-visible {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(64, 36, 20, 0.18);
 }
-.carrossel{
+
+.carrossel {
     display: flex;
     align-items: center;
     gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
 }
-.seta{
+
+.seta {
     background-color: #4e2d12;
-    color: #f4e6d2; 
+    color: #f4e6d2;
     border: none;
     width: 42px;
     height: 42px;
@@ -167,7 +171,17 @@ header nav a:focus-visible {
     padding: 0;
     text-align: center;
 }
-.janela-produtos{
+.seta:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.seta:focus-visible {
+    outline: 2px solid #d6a65d;
+    outline-offset: 4px;
+}
+
+.janela-produtos {
     overflow: hidden;
     width: 100%;
 }
@@ -177,7 +191,7 @@ header nav a:focus-visible {
     gap: 25px;
     flex-wrap: nowrap;
     transition: transform 0.5s ease;
-    
+
 }
 
 .produtos h3 {
@@ -271,20 +285,66 @@ footer {
     text-align: center;
 }
 
-footer h2 {
-    font-size: 24px;
-    margin-bottom: 12px;
-    color: #d6a65d;
-}
-
 footer p {
     font-size: 14px;
     line-height: 1.7;
 }
 
+.titulo-rodape {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #d6a65d;
+}
 
+.botao-cabecalho {
+    background-color: #d6a65d;
+    color: #402414;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
 
+.botao-cabecalho:hover {
+    background-color: #f4e6d2;
+    transform: translateY(-3px);
+}
 
+.botao-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 52px;
+    height: 52px;
+    padding: 0;
+
+    background-color: #25D366;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.botao-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.08);
+}
+
+.botao-whatsapp svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
 
 
 @media (max-width: 768px) {
@@ -296,9 +356,9 @@ footer p {
         flex-direction: row;
     }
 
-    .produtos div {
+    .produtos>div {
         min-width: 0;
-        width: 100%;
+        flex: 0 0 100%;
     }
 
     .produtos p {
@@ -314,23 +374,35 @@ footer p {
         height: 200px;
     }
 
-    header {
+    .cabecalho {
         flex-direction: column;
-        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 18px 20px;
     }
 
     header h1 {
         font-size: 24px;
     }
 
-    header nav {
+    .cabecalho nav {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 12px 18px;
+    }
+
+    .cabecalho nav a {
+        font-size: 14px;
+    }
+
+    .botao-cabecalho {
+        font-size: 14px;
+        padding: 10px 18px;
     }
 
     #hero {
-        padding: 70px 25px;
+        padding: 250px 25px 80px;
     }
 
     #hero h2 {
@@ -393,11 +465,19 @@ footer p {
         text-align: center;
     }
 
-    footer h2 {
-        font-size: 20px;
-    }
-
     footer p {
         font-size: 13px;
     }
+
+ 
 }
+
+   @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        .produtos {
+            transition: none;
+        }
+    }
