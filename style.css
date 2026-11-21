@@ -29,17 +29,17 @@ body {
     z-index: 1000;
 }
 
-header h1 {
+.cabecalho h1 {
     font-size: 28px;
     color: #d6a65d;
 }
 
-header nav {
+.cabecalho nav {
     display: flex;
     gap: 30px;
 }
 
-header nav a {
+.cabecalho nav a {
     text-decoration: none;
     color: #f4e6d2;
     transition: color 0.3s ease, outline-offset 0.3s ease;
@@ -48,11 +48,11 @@ header nav a {
     padding: 5px;
 }
 
-header nav a:hover {
+.cabecalho nav a:hover {
     color: #d6a65d;
 }
 
-header nav a:focus-visible {
+.cabecalho nav a:focus-visible {
     outline: 2px solid #d6a65d;
     outline-offset: 4px;
 }
@@ -129,7 +129,7 @@ header nav a:focus-visible {
     font-size: 16px;
 }
 
-.produtos div {
+.produtos>div {
     background-color: #fffaf3;
     padding: 25px;
     border-radius: 10px;
@@ -141,7 +141,7 @@ header nav a:focus-visible {
 
 }
 
-.produtos div:hover {
+.produtos>div:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(64, 36, 20, 0.18);
 }
@@ -171,7 +171,8 @@ header nav a:focus-visible {
     padding: 0;
     text-align: center;
 }
-.seta:disabled{
+
+.seta:disabled {
     opacity: 0.4;
     cursor: not-allowed;
 }
@@ -268,7 +269,7 @@ section {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 
@@ -304,12 +305,17 @@ footer p {
     padding: 12px 22px;
     border-radius: 6px;
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .botao-cabecalho:hover {
     background-color: #f4e6d2;
     transform: translateY(-3px);
+}
+
+.botao-cabecalho:focus-visible {
+    outline: 2px solid #d6a65d;
+    outline-offset: 4px;
 }
 
 .botao-whatsapp {
@@ -382,7 +388,7 @@ footer p {
         padding: 18px 20px;
     }
 
-    header h1 {
+    .cabecalho h1 {
         font-size: 24px;
     }
 
@@ -400,6 +406,8 @@ footer p {
         font-size: 14px;
         padding: 10px 18px;
     }
+
+
 
     #hero {
         padding: 250px 25px 80px;
@@ -469,15 +477,16 @@ footer p {
         font-size: 13px;
     }
 
- 
+
 }
 
-   @media (prefers-reduced-motion: reduce) {
-        html {
-            scroll-behavior: auto;
-        }
-
-        .produtos {
-            transition: none;
-        }
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
+}
